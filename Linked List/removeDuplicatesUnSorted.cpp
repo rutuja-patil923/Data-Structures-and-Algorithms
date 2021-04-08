@@ -1,6 +1,6 @@
 // Question Link : https://practice.geeksforgeeks.org/problems/remove-duplicates-from-an-unsorted-linked-list/1
 // Time Complexity : O(N)
-// Space Complexity : O(1)
+// Space Complexity : O(N)
 
 //****************************************************************************************************************
 

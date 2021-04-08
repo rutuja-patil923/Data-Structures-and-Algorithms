@@ -7,9 +7,11 @@
 Node *removeDuplicates(Node *head)
 {
  // your code goes here
-    if(!head->next) return head;
+    if(!head->next) 
+        return head;
     Node* current=head->next,*prev=head;
     
+    // checking if previous data matches then detaching that link
     while(current)
     {
         if(prev->data == current->data)
