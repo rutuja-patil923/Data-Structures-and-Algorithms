@@ -70,6 +70,79 @@ int count(Node* head)
 	return cnt;
 }
 
+Node* insertion(Node* head,int pos,int value)
+{
+	if(pos==1)
+	{
+		Node* res=createNode(value);
+		res->next=head;
+		head=res;
+		return head;
+	}
+
+	Node* prev;
+	for(int i=0;i<pos;i++)
+	{
+		prev=head;
+		head=head->next;
+	}
+	// res = 6000
+	Node* res=createNode(value);
+
+	// 100 200 300
+	//prev=100
+	//prev->next=300
+	res->next=prev->next;
+	prev->next=res;
+	return head;
+}
+
+Node* deletion(Node* head,int pos)
+{
+	
+	if(pos==1)
+	{
+		Node* res=head->next;
+		delete(head);
+		return res;
+	}
+
+	Node* prev;
+	Node* current=head;
+	for(int i=0;i<pos;i++)
+	{
+		prev=current;
+		current=current->next;
+	}
+
+	prev->next=current->next;
+	delete(current);
+	return head;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
