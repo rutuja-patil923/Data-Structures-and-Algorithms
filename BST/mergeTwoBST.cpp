@@ -66,7 +66,7 @@ Node* merge(Node* root1,Node* root2)
 
 	int N = arr1.size();
 	int M = arr2.size();
-	vector<Node*> resultant(N+M);
+	vector<Node*> resultant;
 
 	mergeTwo(arr1,arr2,resultant);
 
