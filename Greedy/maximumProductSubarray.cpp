@@ -29,14 +29,14 @@ int main()
 	// 	}
 	// }
 
-	int countNegative=0,minNegative=-INT_MAX,countZero=0,product=1;
+	int countNegative=0,maxNegative=-INT_MAX,countZero=0,product=1;
 
 	for(int i=0;i<N;i++)
 	{
 		if(arr[i]<0)
 		{
 			countNegative++;
-			minNegative = max(minNegative,arr[i]);
+			maxNegative = max(minNegative,arr[i]);
 		}
 		if(arr[i]==0)
 			countZero++;
@@ -46,10 +46,15 @@ int main()
 
 	if(countNegative%2)
 	{
-		
+		// it means negative zero and all other elements are zero
+		if(countZero>0 && countZero + countNegative==N)
+			cout<<0;
+		else
+			// it means that we have one extra negative no which is causing sum to be negative
+			cout<<product/maxNegative;
 	}
-	else if(countZero)
-
-
-	cout<<posProd;
+	else if(countZero==N)
+		cout<<0;
+	else
+		cout<<product;
 }
