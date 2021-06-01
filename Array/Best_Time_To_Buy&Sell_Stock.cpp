@@ -1,6 +1,14 @@
 // Question Link: https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
 // Difficulty Level : Easy
 // Input: prices = [7,1,5,3,6,4]
+  // 7
+  //  \                 6
+  //   \         5     / \
+  //    \       / \   /   \
+  //     \     /   \ /     4
+  //      \   /     3
+  //       \ / 
+  //        1
 // Output: 5
 // Expected Time complexity : O(N)
 // Expected Space Complexity : O(1)
