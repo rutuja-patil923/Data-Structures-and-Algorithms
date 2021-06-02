@@ -19,6 +19,10 @@
 // Output:  0
 // Not possible to earn.
 
+
+
+// This logic can only be applied if there is exactly two minima's are present
+
 #include<bits/stdc++.h>
 using namespace std;
 int main()
