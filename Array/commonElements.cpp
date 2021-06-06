@@ -11,7 +11,9 @@
 // Question Understanding : 3 Sorted array will be given we need to find common elements in all 3
 
 // Naive approch : with 3 nested loops we can find common elements.
-// Optimal Approch : traverse all 3 arrays once Use Merge sorting method with just little modification
+// Optimal Approch 1 : traverse all 3 arrays once Use Merge sorting method with just little modification
+// Optimal Approch 2 : take one by one element from array having minimum length and apply binary search on remaining arrays 
+// Suppose minimum array length is 
 
 #include<bits/stdc++.h>
 using namespace std;
@@ -35,6 +37,7 @@ void commonElements(int arr[],int n1,int brr[],int n2,int crr[],int n3)
 			i++;
 			
 		// common element found
+		// should have condition to check if common element has already been included in resultant array
 		else if(crr[k] == brr[j])
 		{
 			cout<<arr[i]<<" ";
